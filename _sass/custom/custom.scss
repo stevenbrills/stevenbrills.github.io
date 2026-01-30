@@ -161,6 +161,19 @@ code, pre {
   font-size: clamp(16px, 0.5vw, 28px);
 }
 
+/* Home page: make project titles larger than excerpts */
+.home .home-projects > li > a {
+  display: inline-block;
+  font-size: 1.15em;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.home .home-projects > li > div {
+  font-size: 0.95em;
+  opacity: 0.95;
+}
+
 .post-list-heading {
   font-size: clamp(24px, 2vw, 40px);
 }
