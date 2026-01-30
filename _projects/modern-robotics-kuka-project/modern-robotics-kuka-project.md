@@ -355,4 +355,4 @@ In this implementation, CoppeliaSim was set to run in client stepped mode so tha
 </p>
 
 ## Code
-[View on GitHub](https://github.com/yourusername/project-repo)
+[View on GitHub](https://github.com/stevenbrills/modern_robotics_capstone_project)
