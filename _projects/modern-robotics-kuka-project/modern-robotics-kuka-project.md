@@ -350,9 +350,13 @@ In this implementation, CoppeliaSim was set to run in client stepped mode so tha
 
 
 # Demo
-<p align="center">
+<!-- <p align="center">
   <img src="/assets/projects/modern-robotics-kuka-project/kuka_wm.gif" alt="Final Simulation" width="1000"/>
-</p>
+</p> -->
+<video controls width="1300">
+  <source src="/assets/projects/modern-robotics-kuka-project/kuka_wm.mp4" type="video/mp4">
+  Your browser does not support the video tag. <a href="/assets/projects/modern-robotics-kuka-project/kuka_wm.mp4">Download the video</a>.
+</video>
 
 ## Code
 [View on GitHub](https://github.com/stevenbrills/modern_robotics_capstone_project)
