@@ -3,5 +3,23 @@ layout: default
 ---
 
 <div class="home">
+  {% if site.profile %}
+  {% assign profile_image = site.profile.image | default: "" %}
+  {% assign profile_blurb = site.profile.blurb | default: "" %}
+
+  {% if profile_image != "" or profile_blurb != "" %}
+  <div class="home-profile">
+    {% if profile_image != "" %}
+    <img class="home-profile__image" src="{{ profile_image | relative_url }}"
+      alt="{{ site.profile.alt | default: site.title | escape }}" width="180" height="180" loading="eager"
+      decoding="async">
+    {% endif %}
+
+    {% if profile_blurb != "" %}
+    <p class="home-profile__blurb">{{ profile_blurb | escape }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+  {% endif %}
   {{ content }}
 </div>
