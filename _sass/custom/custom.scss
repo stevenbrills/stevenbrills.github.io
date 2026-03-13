@@ -171,6 +171,28 @@ pre {
   font-size: clamp(16px, 0.5vw, 28px);
 }
 
+/* Home page: profile block (image + one-line blurb) */
+.home-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 1.25em 0 1.75em;
+}
+
+.home-profile__image {
+  width: 800px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 9999px;
+}
+
+.home-profile__blurb {
+  margin-top: 0.55em;
+  max-width: 44ch;
+  font-size: 0.95em;
+}
+
 /* Home page: make project titles larger than excerpts */
 .home .home-projects>li>a {
   display: inline-block;
