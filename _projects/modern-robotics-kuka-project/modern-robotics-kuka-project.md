@@ -358,5 +358,5 @@ In this implementation, CoppeliaSim was set to run in client stepped mode so tha
   Your browser does not support the video tag. <a href="/assets/projects/modern-robotics-kuka-project/kuka_wm.mp4">Download the video</a>.
 </video>
 
-## Code
+# Code
 [View on GitHub](https://github.com/stevenbrills/modern_robotics_capstone_project)
