@@ -222,3 +222,37 @@ pre {
 .post-content h3 {
   font-size: clamp(30px, 2.25vw, 48px) !important;
 }
+
+/* Tables: high-contrast borders on dark background, no fills, compact sizing */
+.post-content table {
+  width: auto;
+  max-width: 100%;
+  color: inherit;
+  border-collapse: collapse;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+.post-content table tr:nth-child(even) {
+  background-color: transparent;
+}
+
+.post-content table th,
+.post-content table td {
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 0.35em 0.7em;
+}
+
+.post-content .table-caption {
+  margin: 1.0em 0 0.35em;
+}
+
+.post-content .table-caption+table {
+  margin-top: 0;
+}
+
+/* Videos in Markdown are raw HTML blocks, so they don't get paragraph spacing by default */
+.post-content video {
+  margin-top: 0.5em !important;
+  margin-bottom: 1.8em !important;
+}

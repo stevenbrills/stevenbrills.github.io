@@ -53,6 +53,7 @@ $$
 $$
 
 Where,
+
 $$
 \qquad \Delta \theta = \theta_2 - \theta_1.
 $$
@@ -402,47 +403,28 @@ The other plots show the evolution over time of the state variables. Since the d
 The implementation available on github includes both jax optimized versions of the simulation and integration methods as well as non-jax versions.
 
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="2" style="text-align:center; font-weight:700; font-size:150%;">Simulation Time (Jax)</th>
-    </tr>
-    <tr>
-      <th>Integrator</th>
-      <th align="right">Computation time (s)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Forward Euler</td><td align="right">0.27</td></tr>
-    <tr><td>Midpoint</td><td align="right">0.28</td></tr>
-    <tr><td>RK4</td><td align="right">0.45</td></tr>
-    <tr><td>Backward Euler</td><td align="right">1.43</td></tr>
-    <tr><td>Implicit Midpoint</td><td align="right">1.41</td></tr>
-    <tr><td>Hermite Simpson</td><td align="right">2.29</td></tr>
-  </tbody>
-</table>
+<p class="table-caption"><strong>Simulation Time (Jax)</strong></p>
+
+| Integrator | Computation time (s) |
+| --- | ---: |
+| Forward Euler | 0.27 |
+| Midpoint | 0.28 |
+| RK4 | 0.45 |
+| Backward Euler | 1.43 |
+| Implicit Midpoint | 1.41 |
+| Hermite Simpson | 2.29 |
 
 
+<p class="table-caption"><strong>Simulation Time (Non-Jax)</strong></p>
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="2" style="text-align:center; font-weight:700; font-size:150%;">Simulation Time (Non-Jax)</th>
-    </tr>
-    <tr>
-      <th>Integrator</th>
-      <th align="right">Computation time (s)</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr><td>Forward Euler</td><td align="right">9.26</td></tr>
-    <tr><td>Midpoint</td><td align="right">11.97</td></tr>
-    <tr><td>RK4</td><td align="right">18.97</td></tr>
-    <tr><td>Backward Euler</td><td align="right">104.64</td></tr>
-    <tr><td>Implicit Midpoint</td><td align="right">111.76</td></tr>
-    <tr><td>Hermite Simpson</td><td align="right">363.27</td></tr>
-  </tbody>
-</table>
+| Integrator | Computation time (s) |
+| --- | ---: |
+| Forward Euler | 9.26 |
+| Midpoint | 11.97 |
+| RK4 | 18.97 |
+| Backward Euler | 104.64 |
+| Implicit Midpoint | 111.76 |
+| Hermite Simpson | 363.27 |
 
 
 
