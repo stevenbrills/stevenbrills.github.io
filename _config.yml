@@ -28,6 +28,13 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  stevenbrills
 
+# Homepage profile block (optional)
+# Set `image` to an absolute site path (e.g. /assets/profile.jpg).
+profile:
+  image: "/assets/profile.jpg"
+  alt: "smee"
+  blurb: ""
+
 # Build settings
 theme: minima
 plugins:
