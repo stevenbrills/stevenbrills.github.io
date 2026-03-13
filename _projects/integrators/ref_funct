@@ -1,0 +1,45 @@
+def double_pendulum_dynamics(params, x):
+	"""
+	Compute the dynamics of a double pendulum system.
+
+	Parameters:
+	- params: A dictionary containing the parameters of the double pendulum,
+			  including lengths (l1, l2), masses (m1, m2), and gravity (g).
+	- x: A numpy array of shape (4,) representing the state of the system,
+		 where x[0] = theta1 (angle of first pendulum),
+			   x[1] = omega1 (angular velocity of first pendulum),
+				x[2] = theta2 (angle of second pendulum),
+				x[3] = omega2 (angular velocity of second pendulum).
+	Returns:
+	- dxdt: A numpy array of shape (4,) representing the time derivatives
+			of the state variables.
+	"""
+
+	l1 = params['l1']
+	l2 = params['l2']
+	m1 = params['m1']
+	m2 = params['m2']
+	g = params['g']
+
+	theta1, omega1, theta2, omega2 = x
+
+	delta = theta2 - theta1
+
+	denom1 = (m1 + m2) * l1 - m2 * l1 * jnp.cos(delta) * jnp.cos(delta)
+	denom2 = (l2 / l1) * denom1
+
+	domega1_dt = (m2 * l1 * omega1 * omega1 * jnp.sin(delta) * jnp.cos(delta) +
+				  m2 * g * jnp.sin(theta2) * jnp.cos(delta) +
+				  m2 * l2 * omega2 * omega2 * jnp.sin(delta) -
+				  (m1 + m2) * g * jnp.sin(theta1)) / denom1
+
+	domega2_dt = (-m2 * l2 * omega2 * omega2 * jnp.sin(delta) * jnp.cos(delta) +
+				  (m1 + m2) * g * jnp.sin(theta1) * jnp.cos(delta) -
+				  (m1 + m2) * l1 * omega1 * omega1 * jnp.sin(delta) -
+				  (m1 + m2) * g * jnp.sin(theta2)) / denom2
+
+	dtheta1_dt = omega1
+	dtheta2_dt = omega2
+
+	dxdt = jnp.array([dtheta1_dt, domega1_dt, dtheta2_dt, domega2_dt])
+	return dxdt
